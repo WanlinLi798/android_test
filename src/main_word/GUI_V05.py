@@ -12,6 +12,7 @@ from Runmain import Runmain
 import threading
 import time
 from tkinter.scrolledtext import ScrolledText
+# from GUI_V04 import Getcase
 
 class MyThread(threading.Thread):
    
@@ -34,11 +35,13 @@ class Application():
         
         fm2 = Frame(master)
         self.openButton = Button(fm2, text='打开case',height=3,width=12,command=self.openexcel)  
-        self.openButton.pack(pady=22)
+        self.openButton.pack(pady=2)
+        self.chooseButton = Button(fm2,text='选择case',height=3,width=12,command=self.choosecase)
+        self.chooseButton.pack(pady=12)
         self.startButton = Button(fm2, text='开始测试',fg = 'green',height=3,width=12,command=fuc)  
-        self.startButton.pack(pady=42)
+        self.startButton.pack(pady=16)
         self.quitButton = Button(fm2, text='停止并退出',fg = 'red',height=3,width=12,command=self.stop)  
-        self.quitButton.pack(pady=30)
+        self.quitButton.pack(pady=16)
         fm2.pack(side=LEFT,fill=BOTH,pady=2,padx=2)
         
         fm3 = Frame(master)
@@ -74,6 +77,12 @@ class Application():
     def openexcel(self):
         os.system(r'..\config\case.xls')
         
+    def choosecase(self):
+        os.system("python GUI_V04.py")
+#         get = Getcase()
+#         get.setcase()
+        
+        
     def stop(self):
         os.system('taskkill -F -PID node.exe')  
         sys.exit(1)     
@@ -102,39 +111,9 @@ class ThreadClient():
         for t in threads:
             t.setDaemon(True)
             t.start()
-#         for t in threads:
-#             t.join()
-#             self.threads = []
-#             t = threading.Thread(target=self.starting)
-#             f = threading.Thread(target=self.readfile)
-#             self.threads.append(t)
-#             self.threads.append(f)
-#             for j in self.threads:
-#                 j.start()
-    
- 
-        
-#     def write(self,file1,file2):
-#         with open(file1, 'r+') as f1:
-#             for line in f1:
-#                 f2 = open(file2, 'a+')
-#                 f2.write(line)
-#                 time.sleep(0.00001)
-                
-#     def windows1(self):
-#         with open(r'D:\BT_auto_test\report\test_log.txt') as f:
-#             while True:
-#                 time.sleep(0.2)
-#                 line = f.readline()
-#                 self.gui.logshow.pack()
-#                 self.gui.logshow.insert(END, line)
-#                 self.gui.logshow.see(END)
-#                 self.gui.logshow.update()
-                
+               
 if __name__ =='__main__':                      
     root =Tk()
     root.title('厉害')
     display = ThreadClient(root)
     root.mainloop()
-
-   

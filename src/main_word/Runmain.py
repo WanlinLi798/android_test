@@ -14,11 +14,11 @@ import time
 
 class Runmain:
     
-    def runmain(self):
+    def runmain(self,i):
         log.logging.info('开始测试喽,Appium启动中，请骚等>>>>>>')
         server = Server()
         server.main()
-        get = GetExcel()
+        get = GetExcel(i)
         Action = ActionMethod()
         case_NO = get.get_case_lines()
         cycle = get.get_handle_value(case_NO-1)
@@ -79,7 +79,7 @@ def get_count():
        
 if __name__ =='__main__':
     run = Runmain()
-    run.runmain()
+    run.runmain(1)
             
             
             

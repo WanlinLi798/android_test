@@ -11,7 +11,7 @@ import Queue
 import serial 
 import threading
 import Tkinter as tk
- 
+from tkinter.scrolledtext import ScrolledText 
  
 isOpened = threading.Event()
 RQueue = Queue.Queue(maxsize=1024)
@@ -19,8 +19,8 @@ TQueue = Queue.Queue(maxsize=1024)
  
  
 root = tk.Tk()
-ComX = tk.StringVar(root,'COM1')
-Baud = tk.StringVar(root,"9600")
+ComX = tk.StringVar(root,'COM4')
+Baud = tk.StringVar(root,"115200")
 Dbit = tk.StringVar(root,'8')
 Sbit = tk.StringVar(root,'1')
 Chck = tk.StringVar(root,'None')
@@ -32,15 +32,8 @@ Open = tk.StringVar(root,u'打开串口')
  
  
 def main():
-    root.title("XIVN1987's COM Shell")
-    s1 = tk.Scrollbar()
-    s1.pack(side='right', fill='y')
-    s2 = tk.Scrollbar(orient='horizontal')
-    s2.pack(side='bottom', fill='x')
-    textpad = tk.Text(yscrollcommand=s1.set, xscrollcommand=s2.set, wrap='none')
-    textpad.pack(expand='yes', fill='both')
-    s1.config(command=textpad.yview)
-    s2.config(command=textpad.xview)
+    root.title("COM Shell")
+    textpad = ScrolledText(root)
     textpad.pack(side='top',padx=3,pady=1,anchor='c')
      
     cnv1 = tk.Canvas(root,height=26,width=580)
@@ -76,7 +69,7 @@ def main():
     com_thread.start()
      
     root.bind("<<COMRxRdy>>",lambda e:textpad.insert("insert", ''.join('%02X' %i for i in [ord(c) for c in RQueue.get()]) if HexD.get() else RQueue.get()))
-    textpad.see('end')  
+    root.bind("<<COMshow>>",lambda e:textpad.see('end'))
     root.mainloop()
  
 def HEXDProc(txt1):
@@ -126,6 +119,7 @@ def COMTrce():
                     rbuf = rbuf+COM.read(n)
                     RQueue.put(rbuf)
                     root.event_generate("<<COMRxRdy>>")
+                    root.event_generate("<<COMshow>>")
                      
             if not TQueue.empty():
                 COM.write(TQueue.get())

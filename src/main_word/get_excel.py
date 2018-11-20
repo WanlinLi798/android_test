@@ -63,5 +63,6 @@ class GetExcel:
     
 if __name__ =='__main__':
     get = GetExcel(1)
+    print get.get_element(7)
     print get.get_except_handle(7)
         

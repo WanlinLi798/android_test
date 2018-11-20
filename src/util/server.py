@@ -73,7 +73,7 @@ class Server:
             thread_list.append(appium_start)
         for j in thread_list:
             j.start()
-        time.sleep(20)
+        time.sleep(25)
                    
 if __name__ == '__main__':
     server = Server()

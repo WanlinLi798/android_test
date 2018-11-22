@@ -69,6 +69,7 @@ class Application():
                 
     def queding(self):
         name = self.nameinput.get()
+        print name
         os.rename(os.path.join(os.getcwd(),'screenshot.png'),os.path.join(r'D:\BT_auto_test\report\G5_android',name+".jpg"))
         
     def openexcel(self):

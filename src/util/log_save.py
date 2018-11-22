@@ -7,13 +7,14 @@ Created on 2018年10月22日
 import time
 import logging
 
-path =r'D:\BT_auto_test\report'
+path =r'..\report'
 
 now = time.strftime('%Y-%m-%M-%H_%S',time.localtime(time.time()))
 logging.basicConfig(level=logging.INFO,
-                format='%(asctime)s %(filename)s %(levelname)s %(message)s',
+#                 format='%(asctime)s %(filename)s %(levelname)s %(message)s',
+                format='%(asctime)s %(levelname)s %(message)s',
                 datefmt='%y%m%d_%H:%M:%S',
-                filename= path+'\\test_log.txt',
+                filename= path+'\\report.txt',
                 filemode='w')
 
 console = logging.StreamHandler()

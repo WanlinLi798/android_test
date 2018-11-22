@@ -23,7 +23,7 @@ class Getcase():
         self.root.geometry("500x"+str(self.sheet_num*4)+'0')
         for i in range(self.sheet_num):
             v = IntVar()
-            txt = "case" + str(i)
+            txt = "case" + str(i+1)
             Checkbutton(self.root,text = "".join(self.sheet_name[i]),variable=v).pack(anchor='w')
             # 设置选项默认不选中
             v.set(1)
@@ -37,6 +37,8 @@ class Getcase():
             if each[0].get() == 1:
                 checked += each[1] + "  "
         tkMessageBox.showinfo(title="选中项为", message=checked)
+        with open('result.txt','w') as f:
+            f.write(checked)    
         self.root.quit()
 
 if __name__ == '__main__':

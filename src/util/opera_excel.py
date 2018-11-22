@@ -49,10 +49,10 @@ class OperaExcel:
         data = self.data.cell(row,line).value
         return data
     
-    def write_value(self,row,line,value):
+    def write_value(self,i,row,line,value):
         read_value = self.get_excel()
         write_data = copy(read_value)
-        write_save = write_data.get_sheet(0)
+        write_save = write_data.get_sheet(i)
         write_save.write(row,line,value)
         write_data.save(self.file_path)
         

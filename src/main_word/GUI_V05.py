@@ -12,7 +12,11 @@ from Runmain import Runmain
 import threading
 import time
 from tkinter.scrolledtext import ScrolledText
-# from GUI_V04 import Getcase
+import yaml
+from tkinter import filedialog
+import cv2
+from tkinter import colorchooser
+
 
 class MyThread(threading.Thread):
    
@@ -27,41 +31,28 @@ class MyThread(threading.Thread):
 
 
 class Application():     
-    def __init__(self,master,fuc):
-        fm1 = Frame(master,bg='white')
-        self.helloLable = Label(fm1, text='简易自动化工具',font=('宋体',36,"bold"),fg = 'blue',bg='white' )
-        self.helloLable.pack()
-        fm1.pack(side=TOP,fill=BOTH,pady=2,padx=2)
-        
-        fm2 = Frame(master)
-        self.openButton = Button(fm2, text='打开case',height=3,width=12,command=self.openexcel)  
-        self.openButton.pack(pady=2)
-        self.chooseButton = Button(fm2,text='选择case',height=3,width=12,command=self.choosecase)
-        self.chooseButton.pack(pady=12)
-        self.startButton = Button(fm2, text='开始测试',fg = 'green',height=3,width=12,command=fuc)  
-        self.startButton.pack(pady=16)
-        self.quitButton = Button(fm2, text='停止并退出',fg = 'red',height=3,width=12,command=self.stop)  
-        self.quitButton.pack(pady=16)
-        fm2.pack(side=LEFT,fill=BOTH,pady=2,padx=2)
-        
-        fm3 = Frame(master)
-        self.setButton = Button(fm3, text='设置对比图片',height=1,width=16,command=self.PIC)  
-        self.setButton.place(x=50)       
-        self.nameinput = Entry(fm3)
-        self.nameinput.pack() 
-        self.commitButton = Button(fm3, text='确定',height=1,width=4,command=self.queding)  
-        self.commitButton.place(x=360) 
-        self.logshow = ScrolledText(fm3)   
-#         self.scroll = Scrollbar(fm3)
-#         self.scroll.pack(side=RIGHT, fill=Y)
-#         self.logshow = Text(fm3, yscrollcommand=self.scroll.set,wrap='none')
-        self.logshow.pack(expand=YES,pady=10)
-#         self.scroll.config(command=self.logshow.yview)
-        fm3.pack(side=BOTTOM,fill=BOTH,pady=2,padx=2)
-        with open(r'D:\BT_auto_test\report\test_log.txt') as f:
+    def __init__(self,master,fuc,fuc1):
+        Label(master,text='一键自动化',font=('宋体',36,"bold"),fg = 'blue',bg='white').grid(row=0,column=0,rowspan=2,columnspan=6)
+        Button(master, height=4,width=12,text="编辑case",command=fuc1).grid(row=2,column=0,rowspan=2)
+        Button(master, height=4,width=12,text="选择case",command=self.choosecase).grid(row=4,column=0,rowspan=2)
+        Button(master, height=4,width=12,text="开始测试",command=fuc).grid(row=6,column=0,rowspan=2)
+        Button(master, height=4,width=12,text="停止当前case",command=self.stop).grid(row=8,column=0,rowspan=2)
+        Button(master, height=1,width=70,text="设置对比图片",command=self.PIC).grid(row=2,column=1,columnspan=3,sticky=E,padx=10)
+        Button(master, height=1,width=16,text="查看测试报告").grid(row=2,column=4,sticky=W,padx=5)
+        Button(master, height=1,width=16,text="查看问题截图",command = self.openerror).grid(row=2,column=5)
+        Button(master, height=1,width=16,text="清空截图信息",command = self.clearPIC).grid(row=3,column=5)
+        Button(master, text="全屏图片名称确认",command=self.queding).grid(row=3,column=2,sticky=W,padx=5)
+        Button(master, text="ROI图片名称确认", height=1,width=16,command=self.ROIqueding).grid(row=3,column=4,sticky=W,padx=5)
+        self.nameinput1 = Entry(master)
+        self.nameinput1.grid(row=3,column=1,sticky=E,padx=5)
+        self.nameinput2 = Entry(master)
+        self.nameinput2.grid(row=3,column=3,sticky=E,padx=5)
+        self.logshow = ScrolledText(master,font=('宋体',16,"bold"),fg='red')
+        self.logshow.grid(row=4, column=1, columnspan=5, rowspan=6, sticky=W+E+N+S, padx=5, pady=5)
+        with open(r'..\report\report.txt') as f:
             while True:
                 line = f.readline()
-                self.logshow.pack()
+                self.logshow.grid()
                 self.logshow.insert(END, line)
                 self.logshow.see(END)
                 self.logshow.update()
@@ -71,18 +62,56 @@ class Application():
         os.system("python drow_ROI.py")
                 
     def queding(self):
-        name = self.nameinput.get()
-        os.rename(os.path.join(os.getcwd(),'screenshot.png'),os.path.join(r'D:\BT_auto_test\report\G5_android',name+".jpg"))
+        name1 = self.nameinput1.get()
+        print name1
+        os.rename(os.path.join(os.getcwd(),"screenshot.png"),os.path.join(os.getcwd(),name1+".png"))
         
-    def openexcel(self):
-        os.system(r'..\config\case.xls')
+    def ROIqueding(self):
+        name2 = self.nameinput2.get()
+        print name2
+        with open("ROI.yaml",'r+') as fr:
+            data = yaml.load(fr)
+            y1 = data['key']['iy']
+            x1 = data['key']['ix']
+            y = data['key']['y']
+            x = data['key']['x']
+            data1 = {
+                'key'+name2:{
+                    "ix":x1,
+                    "iy":y1,
+                    "x":x,
+                    "y":y,
+                    }  
+                }
+            yaml.dump(data1,fr)
+        os.rename(os.path.join(os.getcwd(),"screenshot.png"),os.path.join(os.getcwd(),name2+".png"))
+            
+    def openerror(self):
+        filename = filedialog.askopenfilename(title='打开问题图片',initialdir = '../error_screenshot',filetypes=[('png', '*.png'), ('All Files', '*')] )
+        print(filename)
+        image = cv2.imread(filename)
+        cv2.imshow('image',image)
+        
+#     def setlog(self):
+# #         return 'red'
+#         C = colorchooser.askcolor()
+#         return str(C[1])
+
+    def del_files(self,path):
+        for root , dirs, files in os.walk(path):
+            for name in files:
+                if name.endswith(".png"):   #指定要删除的格式，这里是png 可以换成其他格式
+                    os.remove(os.path.join(root, name))
+
+    def clearPIC(self):
+        with open("ROI.yaml",'w') as fr:
+            fr.truncate()    
+        fr.close()
+        self.del_files('../main_word')
         
     def choosecase(self):
         os.system("python GUI_V04.py")
-#         get = Getcase()
-#         get.setcase()
-        
-        
+
     def stop(self):
         os.system('taskkill -F -PID node.exe')  
         sys.exit(1)     
@@ -91,28 +120,32 @@ class ThreadClient():
     
     def __init__(self, master):
         self.master = master 
-        self.gui = Application(master, self.start) #将我们定义的GUI类赋给服务类的属性，将执行的功能函数作为参数传入
+        self.gui = Application(master, self.start,self.openfile) #将我们定义的GUI类赋给服务类的属性，将执行的功能函数作为参数传入
 
 
     def starting(self):
-        run = Runmain()
-        run.runmain()
+        os.system("python test4.py")
+#         run = Runmain()
+#         run.runmain()
+    def openexcel(self):
+        os.system(r'..\config\case.xls')  
+        
+    def openfile(self):
+        b = MyThread(self.openexcel)
+        b.start()
+        
         
     def start(self):
-#         file1 = 'log.txt'
-#         file2 = r'D:\BT_auto_test\report\test_log.txt'
+        with open(r'D:\BT_auto_test\report\test_log.txt','w') as f:
+            f.truncate()
         threads = []
-#         t1 = MyThread(self.write, (file1,file2))
-#         threads.append(t1)
-#         t2 = MyThread(self.windows1)
-#         threads.append(t2)
         t = MyThread(self.starting)
         threads.append(t)
         for t in threads:
             t.setDaemon(True)
             t.start()
                
-if __name__ =='__main__':                      
+if __name__ =='__main__':              
     root =Tk()
     root.title('厉害')
     display = ThreadClient(root)

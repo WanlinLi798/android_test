@@ -47,9 +47,30 @@ class WriteUserCommand:
         data = self.read_data()
         return len(data)
 
+    def change_key(self,name):
+        with open("../main_word/ROI.yaml",'r+') as fr:
+            data = yaml.load(fr)
+            y1 = data['key']['iy']
+            x1 = data['key']['ix']
+            y = data['key']['y']
+            x = data['key']['x']
+            data1 = {
+                'key'+name:{
+                    "ix":x1,
+                    "iy":y1,
+                    "x":x,
+                    "y":y,
+                    }  
+                }
+            yaml.dump(data1,fr)
+            return data1
+           
+        
+            
             
         
 if __name__ == '__main__' :
     YQ = WriteUserCommand()
+    print YQ.change_key('BT')
 #     print YQ.get_value('user_info_'+str(0),'port')
 #     print YQ.read_data()[key]['port']

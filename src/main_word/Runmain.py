@@ -15,7 +15,7 @@ import time
 class Runmain:
     
     def runmain(self,i):
-        log.logging.info('开始测试喽,Appium启动中，请骚等>>>>>>')
+        log.logging.info('case'+str(i+1)+'开始测试喽,Appium启动中，请骚等>>>>>>')
         server = Server()
         server.main()
         get = GetExcel(i)
@@ -30,13 +30,13 @@ class Runmain:
             fail_num = 0
             log.logging.info( '开始第'+str(n)+"次测试")
             case_NO = get.get_case_lines()
-            for i in range(1,case_NO-1):
+            for m in range(1,case_NO-1):
 
-                method = get.get_method(i)
-                element = get.get_element(i)
-                handle_value = get.get_handle_value(i) 
-                expect_element = get.get_except(i)
-                expect_handle = str(get.get_except_handle(i))
+                method = get.get_method(m)
+                element = get.get_element(m)
+                handle_value = get.get_handle_value(m) 
+                expect_element = get.get_except(m)
+                expect_handle = str(get.get_except_handle(m))
 
                 
                 excute_method = getattr(Action,method)
@@ -55,11 +55,11 @@ class Runmain:
                             expect_result = getattr(Action,expect_handle)
                             result = expect_result(expect_element,n)                            
                         if result:
-                            get.write_value(i,n+7,"pass")
+#                             get.write_value(i,m,n+7,"pass")
 
                             log.logging.info('第'+str(n)+"次测试进行中......")
                         else:
-                            get.write_value(i,n+7,"fail") 
+#                             get.write_value(i,m,n+7,"fail") 
                             fail_num+=1
                             log.logging.info('第'+str(n)+"次测试FAIL")
             if fail_num==0:

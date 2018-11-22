@@ -17,6 +17,9 @@ from PIL import Image
 import operator
 import yaml
 import cv2
+import util.log_save as log
+
+path =os.path.abspath(os.path.dirname(os.getcwd()))+'\error_screenshot'
 
 
 class ActionMethod():
@@ -31,10 +34,19 @@ class ActionMethod():
         self.WF = WriteUserCommand()
               
     def click(self,*args):
-        element = self.get.get_element(args[0])
-        if element == None:
-            print '元素没有找到'
-        element.click()
+        try:
+            log.logging.info('开始点击'+str(args[0]))
+            element = self.get.get_element(args[0])
+            element.click()
+        except Exception:
+#         if element == None:
+            log.logging.info(str('Fail:  '+args[0])+'元素没有找到......')
+            tm = time.strftime("%Y%m%d_%H%M%S")
+            path1 = os.path.join(path,tm+args[0]+'.png')
+ 
+            self.driver.get_screenshot_as_file(path1)
+            quit()
+#         element.click()
         
     def click_home(self):
         self.driver.keyevent(3)
@@ -56,13 +68,20 @@ class ActionMethod():
         return self.get.get_element(args[0])
     
     def check(self,*args):
-        element = self.get.get_element(args[0])
-        if element == None:
-            print '元素没有找到'
-            return None
-        return element
+        try:
+            element = self.get.get_element(args[0])
+            return element
+        except :
+#             if element == None:
+            print '元素没有找到......'
+            tm = time.strftime("%Y%m%d_%H%M%S")
+            path1 = os.path.join(path,tm+args[0]+'.png')
+
+            self.driver.get_screenshot_as_file(path1)
+
     
     def picture_match(self,pic,row):
+        tm = time.strftime("%Y%m%d_%H%M%S")
         PIC = Image.open(os.getcwd()+"/"+pic+".png")
         self.driver.get_screenshot_as_file('file.png')
         match =  Image.open('file.png')
@@ -70,11 +89,12 @@ class ActionMethod():
         h2 = match.histogram()
         differ = math.sqrt(reduce(operator.add, list(map(lambda a,b: (a-b)**2, h1, h2)))/len(h1))
         if differ > 1000:
-            os.rename(os.path.join(os.getcwd(),'file.png'),os.path.join(r'D:\BT_auto_test\report\G5_android',str(row)+".jpg"))
+            os.rename(os.path.join(os.getcwd(),'file.png'),os.path.join(path,tm+str(row)+".png"))
             return None
         return differ
         
     def ROI_picture_match(self,pic,row):
+        tm = time.strftime("%Y%m%d_%H%M%S")
         image_path = os.getcwd()+"/"+pic+".png"
         srcImg  = cv2.imread(image_path)
         self.driver.get_screenshot_as_file('filename.png')
@@ -82,27 +102,25 @@ class ActionMethod():
         
         with open(os.getcwd()+'/ROI.yaml') as f:
             data = yaml.load(f) 
-            roi = data['key']
+            roi = data['key'+pic]
         img_roi  = srcImg[roi['iy']:(roi['iy']+roi['y']),roi['ix']:(roi['ix']+roi['x'])]  
         match_roi = match[roi['iy']:(roi['iy']+roi['y']),roi['ix']:(roi['ix']+roi['x'])]
-        cv2.imwrite(os.getcwd()+"/img_roi.jpg",img_roi) 
-        cv2.imwrite(os.getcwd()+"/match_roi.jpg",match_roi)  
-        PIC_roi = Image.open(os.getcwd()+"/img_roi.jpg")
-        match_roi =  Image.open(os.getcwd()+"/match_roi.jpg") 
+        cv2.imwrite(os.getcwd()+"/img_roi.png",img_roi) 
+        cv2.imwrite(os.getcwd()+"/match_roi.png",match_roi)  
+        PIC_roi = Image.open(os.getcwd()+"/img_roi.png")
+        match_roi =  Image.open(os.getcwd()+"/match_roi.png") 
         h1 = PIC_roi.histogram()
         h2 = match_roi.histogram()
         differ = math.sqrt(reduce(operator.add, list(map(lambda a,b: (a-b)**2, h1, h2)))/len(h1))
         if differ > 10:
-            os.rename(os.path.join(os.getcwd(),'filename.png'),os.path.join(r'D:\BT_auto_test\report\G5_android',str(row)+".jpg"))
+            os.rename(os.path.join(os.getcwd(),'filename.png'),os.path.join(path,tm+str(row)+".png"))
             print differ
             return None
         return h2            
-                     
-            
-    
+
 if __name__ =='__main__':      
     action = ActionMethod()
-    action.ROI_picture_match()
+    action.ROI_picture_match('BT',1)
     
 
             

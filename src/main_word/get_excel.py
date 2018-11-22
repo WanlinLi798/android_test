@@ -56,9 +56,9 @@ class GetExcel:
         else:
             return value   
         
-    def write_value(self,row,line,value):
+    def write_value(self,i,row,line,value):
         self.opera.get_excel()
-        self.opera.write_value(row,line,value)
+        self.opera.write_value(i,row,line,value)
         
     
 if __name__ =='__main__':

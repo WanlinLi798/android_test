@@ -40,7 +40,7 @@ class CaseTest(parameTestcase):
         n = 0
         # print 'this is case2'
         # self.assertNotEquals("1","2",'fei数据错误')
-        while(n<10):
+        while(n<3):
             n+=1
             self.SourceBusiness.USB_audio_switch()
 
@@ -60,9 +60,10 @@ def get_suite(i):
     suite = unittest.TestSuite()
     suite.addTest(CaseTest("test_case_1",parame=i))
     suite.addTest(CaseTest("test_case_2",parame=i))
-    html_file = r"D:\Users\uidq1501\eclipse-workspace\android_test\src\report\report"+str(i)+".html"
-    fp = file(html_file,'wb')
-    HTMLTestRunner.HTMLTestRunner(fp).run(suite)
+    unittest.TextTestRunner().run(suite)
+#     html_file = r"D:\Users\uidq1501\eclipse-workspace\android_test\src\report\report"+str(i)+".html"
+#     fp = file(html_file,'wb')
+#     HTMLTestRunner.HTMLTestRunner(fp).run(suite)
 
 def get_count():
     write_user_file = WriteUserCommand()
@@ -76,7 +77,7 @@ def appium_init():
 if __name__ == '__main__':
     appium_init()
     threads = []
-    for i in range(get_count()):
+    for i in range(2):
         print i
         t = multiprocessing.Process(target=get_suite,args=(i,))
         threads.append(t)

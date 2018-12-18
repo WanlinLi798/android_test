@@ -29,12 +29,12 @@ def draw_circle(event,x,y,flags,param):
                 pass
                 #cv2.rectangle(img,(ix,iy),(x,y),(0,255,0),1)#z注释后为不填充的矩形，不注释就是填充的
             else:
-                cv2.circle(img,(x,y),5,(130,66,130),-1)
+                cv2.circle(img,(x,y),5,(130,66,130),1)
 
     elif event == cv2.EVENT_LBUTTONUP:#鼠标左键松开事件
         drawing = False
         if mode == True:
-            cv2.rectangle(img,(ix,iy),(x,y),(0,255,0),3)
+            cv2.rectangle(img,(ix,iy),(x,y),(0,255,0),1)
             with open(os.getcwd()+'/ROI.yaml','a') as f:
                 data = {
                     "key":{

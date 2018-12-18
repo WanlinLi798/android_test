@@ -80,14 +80,29 @@ Created on 2018年11月20日
 #     root.mainloop()
 #     
 # #     mainloop()
+import time
+import chardet
 
-import sys
-import os
-
-def del_files(path):
-    for root , dirs, files in os.walk(path):
-        for name in files:
-            if name.endswith(".png"):   #指定要删除的格式，这里是png 可以换成其他格式
-                os.remove(os.path.join(root, name))
-a = ((255, 0, 0), '#ff0000')
-print a[1]
+def sound_check(n):
+#     creat_filename = open(self.read.get_value('key','write_labview_log'),'w')
+#     creat_filename.write(str(n))
+#     creat_filename.flush()
+#     time.sleep(2)
+#     creat_filename.close()
+#     p = subprocess.Popen(r'sound_check.exe')
+#     p.wait()
+        with open('Soundresult.txt','r') as f:
+            lines = f.readlines()
+            n=0
+            while(1):
+                n+=1
+                a_str = "".join(lines[-n:])
+                if a_str.strip()!='':
+                    print a_str
+                    break
+            if 'OK' in a_str:
+                print a_str
+            else:
+                print '77777'
+            
+sound_check(10)

@@ -20,12 +20,12 @@ class BaseDriver:
           "deviceName": "android",
           "udid": udid,
           "noReset": 'true',#不重复安装APP
-          'app':r'D:\qqmusic.apk',
-          "appWaitActivity": "com.tencent.qqmusic.activity.baseactivity.PermissionActivity",     
+#           'app':r'D:\qqmusic.apk',
+#           "appWaitActivity": "com.tencent.qqmusic.activity.baseactivity.PermissionActivity",     
 #           "appActivity": ".activity.AppStarterActivity",
 #           "appPackage": "com.tencent.qqmusic",
-          # "appActivity": "com.desaysv.hmi.SvSettings",
-          # "appPackage": "com.android.settings",
+        "appActivity": "com.desaysv.hmi.SvSettings",
+        "appPackage": "com.android.settings",
           'newCommandTimeout': '300',
     #       "automationName":"UIAutomator2"
         }

@@ -6,7 +6,6 @@ Created on 2018年11月2日
 '''
 import xlrd
 from xlutils.copy import copy 
-import time
 # excel = xlrd.open_workbook(r"D:\Users\uidq1501\eclipse-workspace\android_test\src\config\case.xlsx")
 # data = excel.sheets()[0]
 # print data.nrows
@@ -16,7 +15,7 @@ class OperaExcel:
     
     def __init__(self,i=None,file_path=None):
         if file_path == None:
-            self.file_path = r"D:\Users\uidq1501\eclipse-workspace\android_test\src\config\case.xls"
+            self.file_path = r"..\config\case.xls"
         else:
             self.file_path = file_path
         if i == None:

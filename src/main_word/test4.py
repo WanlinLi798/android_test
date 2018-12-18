@@ -15,7 +15,7 @@ import time
 import unittest
 import HTMLTestRunner
 import threading
-from main_word.Runmain import Runmain
+from Runmain import Runmain
 import re
 import util.log_save as log
 
@@ -56,10 +56,9 @@ def __generateTestCases():
         data = f.readlines()
         arglists = re.findall(r"\d+\.?\d*",str(data[0]))
         
-#     arglists = ['0','1','2']
     for args in arglists:
         setattr(MyTestCase, 'test_func_%s'%(args),MyTestCase.getTestFunc(*args))
 __generateTestCases()
 
 if __name__ =='__main__': 
-    unittest.main()     
+   unittest.main()

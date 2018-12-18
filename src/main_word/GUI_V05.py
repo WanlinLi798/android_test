@@ -15,7 +15,7 @@ from tkinter.scrolledtext import ScrolledText
 import yaml
 from tkinter import filedialog
 import cv2
-from tkinter import colorchooser
+from GUI_V04 import Getcase
 
 
 class MyThread(threading.Thread):
@@ -32,12 +32,13 @@ class MyThread(threading.Thread):
 
 class Application():     
     def __init__(self,master,fuc,fuc1):
-        Label(master,text='一键自动化',font=('宋体',36,"bold"),fg = 'blue',bg='white').grid(row=0,column=0,rowspan=2,columnspan=6)
+        Label(master,text='小V自动化平台',font=('宋体',36,"bold"),fg = 'blue').grid(row=0,column=0,rowspan=2,columnspan=6)
         Button(master, height=4,width=12,text="编辑case",command=fuc1).grid(row=2,column=0,rowspan=2)
         Button(master, height=4,width=12,text="选择case",command=self.choosecase).grid(row=4,column=0,rowspan=2)
         Button(master, height=4,width=12,text="开始测试",command=fuc).grid(row=6,column=0,rowspan=2)
         Button(master, height=4,width=12,text="停止当前case",command=self.stop).grid(row=8,column=0,rowspan=2)
-        Button(master, height=1,width=70,text="设置对比图片",command=self.PIC).grid(row=2,column=1,columnspan=3,sticky=E,padx=10)
+        Button(master, height=1,width=30,text="设置对比图片",command=self.PIC).grid(row=2,column=1,columnspan=2,sticky=E,padx=10)
+        Button(master,height =1,width=30,text='摄像头截图',command = self.CAM).grid(row=2,column=3)
         Button(master, height=1,width=16,text="查看测试报告").grid(row=2,column=4,sticky=W,padx=5)
         Button(master, height=1,width=16,text="查看问题截图",command = self.openerror).grid(row=2,column=5)
         Button(master, height=1,width=16,text="清空截图信息",command = self.clearPIC).grid(row=3,column=5)
@@ -60,12 +61,20 @@ class Application():
     def PIC(self):
         tkMessageBox.showinfo('Message', '如果要对比多个图片，请在标记图片后，在右边的方框命名，并在Excel中填上对应的名称，图片加载需要几秒钟，不要走开！' )
         os.system("python drow_ROI.py")
+        
+    def CAM(self):
+        tkMessageBox.showinfo('Message', '如果要对比多个图片，请在标记图片后，在右边的方框命名，并在Excel中填上对应的名称，图片加载需要几秒钟，不要走开！' )
+        os.system("python use_camara.py")
                 
     def queding(self):
         name1 = self.nameinput1.get()
         print name1
-        os.rename(os.path.join(os.getcwd(),"screenshot.png"),os.path.join(os.getcwd(),name1+".png"))
-        
+        name_list = os.listdir(os.getcwd())
+        if name1+'.png' in name_list:
+            tkMessageBox.showinfo('Error','图片名字冲突，请重命名')
+        else:
+            os.rename(os.path.join(os.getcwd(),"screenshot.png"),os.path.join(os.getcwd(),name1+".png"))     
+                 
     def ROIqueding(self):
         name2 = self.nameinput2.get()
         print name2
@@ -104,7 +113,7 @@ class Application():
                     os.remove(os.path.join(root, name))
 
     def clearPIC(self):
-        with open("ROI.yaml",'w') as fr:
+        with open("../main_word/ROI.yaml",'w') as fr:
             fr.truncate()    
         fr.close()
         self.del_files('../main_word')
@@ -122,9 +131,8 @@ class ThreadClient():
         self.master = master 
         self.gui = Application(master, self.start,self.openfile) #将我们定义的GUI类赋给服务类的属性，将执行的功能函数作为参数传入
 
-
     def starting(self):
-        os.system("python test4.py")
+        os.system("python ../main_word/test4.py")
 #         run = Runmain()
 #         run.runmain()
     def openexcel(self):
@@ -136,7 +144,7 @@ class ThreadClient():
         
         
     def start(self):
-        with open(r'D:\BT_auto_test\report\test_log.txt','w') as f:
+        with open(r'..\report\report.txt','w') as f:
             f.truncate()
         threads = []
         t = MyThread(self.starting)
@@ -147,6 +155,6 @@ class ThreadClient():
                
 if __name__ =='__main__':              
     root =Tk()
-    root.title('厉害')
+    root.title('小V一键自动化')
     display = ThreadClient(root)
     root.mainloop()

@@ -13,13 +13,15 @@ class SourceBusiness:
     def __init__(self,i):
         self.handle = SourceHandle(i)
         self.WF = WriteUserCommand()
+        self.udid = self.WF.get_value('user_info_'+str(i),'deviceName')
+
         
     def BT_switch(self):
         try:
             self.handle.home()
             time.sleep(1)
-            udid = self.WF.get_value('user_info_'+str(0),'deviceName')
-            os.system('adb -s '+udid+' shell input tap 404 648')
+#             udid = self.WF.get_value('user_info_'+str(i),'deviceName')
+            os.system('adb -s '+self.udid+' shell input tap 404 648')
 #             os.system('adb -s 00001234 shell input tap 404 648')
             print 11111
             self.handle.music_hall()
@@ -34,8 +36,8 @@ class SourceBusiness:
 #             os.system('adb -s 00001234 shell input tap 640 563')
 # #             self.handle.menu()
 #             self.handle.player()
-            udid = self.WF.get_value('user_info_'+str(0),'deviceName')
-            os.system('adb -s '+udid+' shell input tap 404 648')
+#             udid = self.WF.get_value('user_info_'+str(i),'deviceName')
+            os.system('adb -s '+self.udid+' shell input tap 404 648')
 #             os.system('adb -s 00001234 shell input tap 404 648')
             self.handle.music_hall()
             self.handle.USB_audio()
@@ -54,8 +56,8 @@ class SourceBusiness:
     def factory_reset(self):
         self.handle.home()
         time.sleep(5)
-        udid = self.WF.get_value('user_info_'+str(0),'deviceName')
-        os.system('adb -s '+udid+' shell input tap 640 563')
+#         udid = self.WF.get_value('user_info_'+str(0),'deviceName')
+        os.system('adb -s '+self.udid+' shell input tap 640 563')
         print '进入设置界面'
         time.sleep(1)
         self.handle.setting()
@@ -67,7 +69,7 @@ class SourceBusiness:
 
 
 if __name__ == '__main__' :
-    SourceBusiness(0).factory_reset()
+    SourceBusiness().factory_reset()
     # while(1):
     #   Server().kill_server()
     #   Server().start_server(0)

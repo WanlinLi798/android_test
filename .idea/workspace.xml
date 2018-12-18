@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44e6e21a-dda8-411e-83ce-0658db515845" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/opencvpro/.indexes/e4/4b/history.index" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/test/.indexes/92/history.index" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/1.v1_sys_astdelta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/10.v1_sys_astdelta" afterDir="false" />
@@ -23,8 +24,13 @@
       <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/7.v1_sys_astdelta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/8.v1_sys_astdelta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/9.v1_sys_astdelta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/shell/__b_cks4zyr5xxqzv6dn74si8gcsy.top" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/shell/_io_824kepbmr0wdl7bc0qei2lubl.top" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/shell/_io_cu6mcc8ovw7baidhk6ljj8u32.top" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/shell/_su_65afp8v5489y1oev34qcwfbvi.top" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/shell/_su_9owj3rkfqo3jdtg3630eqhehv.top" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/shell/_su_dutr5y33r8nvy5cyrgfs8ovzr.top" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/shell/_su_ev9fdbs5i7m9rst84dyhukwqk.top" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/shell/cv2_1s9xndssl6vg7voye95oo3ptu.top" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/shell/cv2_dr20dmn7h43mvkf72e50y4gpe.top" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/case/factory_reset.py" afterDir="false" />
@@ -51,6 +57,7 @@
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/opencvpro/com.python.pydev.analysis/AdditionalProjectInterpreterInfo.pydevinfo" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/opencvpro/com.python.pydev.analysis/AdditionalProjectInterpreterInfo.pydevinfo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/opencvpro/org.python.pydev/v1_astmanager/modulesKeys" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/opencvpro/org.python.pydev/v1_astmanager/modulesKeys" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/source_track_test/.indexes/e4/3e/history.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/source_track_test/com.python.pydev.analysis/AdditionalProjectInterpreterInfo.pydevinfo" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/source_track_test/com.python.pydev.analysis/AdditionalProjectInterpreterInfo.pydevinfo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/test/com.python.pydev.analysis/AdditionalProjectInterpreterInfo.pydevinfo" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/test/com.python.pydev.analysis/AdditionalProjectInterpreterInfo.pydevinfo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/test/org.python.pydev/v1_astmanager/modulesKeys" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/test/org.python.pydev/v1_astmanager/modulesKeys" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
@@ -60,15 +67,47 @@
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/server-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/server-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.equinox.p2.ui/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.equinox.p2.ui/dialog_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.recommenders.news.impl/downloads/http%3A%2F%2Fwww.eclipse.org%2Fhome%2Feclipsenews.rss" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.recommenders.news.impl/downloads/http%3A%2F%2Fwww.eclipse.org%2Fhome%2Feclipsenews.rss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/dialog_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/modulesKeys" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.python.pydev/v1_258tvcdekrk5tmtf5h0ez044z/modulesKeys" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/business/source_switch_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/source_switch_business.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case/factory_reset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/case/factory_reset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case/test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/case/test_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/case.xls" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/case.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/userconfig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/userconfig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/BT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/GUI_V05.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/GUI_V05.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/ROI.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/ROI.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/Runmain.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/Runmain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/USB.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/USB.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/USB2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/action_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/action_method.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/drow_ROI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/drow_ROI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/file.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/file.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/filename.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/img_roi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/img_roi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/match_roi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/match_roi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/result.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/test2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_word/test4.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/test4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/report/report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/report/report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/report/report0.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/report/report0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/report/report1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/report/report1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/opera_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/opera_excel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/read_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/read_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../opencvpro/src/learn_case/3get_video_from_camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/../opencvpro/src/learn_case/3get_video_from_camera.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../test/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/test/com2345.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/test/com2345.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test/test/test2.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../test/test/test3.py" beforeDir="false" />
     </list>
@@ -89,6 +128,7 @@
     <SUITE FILE_PATH="coverage/android_test$factory_reset.coverage" NAME="factory_reset Coverage Results" MODIFIED="1540888480589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/case" />
     <SUITE FILE_PATH="coverage/android_test$dos_cmd.coverage" NAME="dos_cmd Coverage Results" MODIFIED="1540459001134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/util" />
     <SUITE FILE_PATH="coverage/android_test$test_case.coverage" NAME="test_case Coverage Results" MODIFIED="1540778173167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/case" />
+    <SUITE FILE_PATH="coverage/android_test$GUI_V05.coverage" NAME="GUI_V05 Coverage Results" MODIFIED="1545028824570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main_word" />
     <SUITE FILE_PATH="coverage/android_test$write_user_command.coverage" NAME="write_user_command Coverage Results" MODIFIED="1540541776971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/util" />
     <SUITE FILE_PATH="coverage/android_test$Unittests_for_test_case_CaseTest.coverage" NAME="Unittests for test_case.CaseTest Coverage Results" MODIFIED="1540889049440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/case" />
     <SUITE FILE_PATH="coverage/android_test$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1542341362716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main_word" />
@@ -103,10 +143,13 @@
     <session id="-2140135875">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.44" value="1" />
@@ -118,15 +161,16 @@
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.59" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.74" value="1" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
           <entry key="ini" value="6" />
-          <entry key="py" value="58" />
+          <entry key="py" value="60" />
           <entry key="yaml" value="10" />
         </counts>
       </usages-collector>
@@ -134,7 +178,7 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="Ini" value="6" />
-          <entry key="Python" value="58" />
+          <entry key="Python" value="60" />
           <entry key="YAML" value="10" />
         </counts>
       </usages-collector>
@@ -159,19 +203,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main_word/GUI.py">
+        <entry file="file://$PROJECT_DIR$/src/main_word/Runmain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+            <state relative-caret-position="189">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main_word/GUI_V05.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="e#74#95#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main_word/Runmain.py">
+        <entry file="file://$PROJECT_DIR$/src/util/desired_setting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="27">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -186,7 +242,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -218,8 +274,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
-    <option name="y" value="36" />
+    <option name="x" value="159" />
+    <option name="y" value="52" />
     <option name="width" value="1599" />
     <option name="height" value="909" />
   </component>
@@ -229,7 +285,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,40 +302,17 @@
               <item name="android_test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="android_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="android_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="android_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="android_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="case" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="android_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="android_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main_word" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="android_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="android_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Python27/Lib/site-packages/PyQt4/pyrcc4.exe" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -294,7 +326,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Runmain">
+  <component name="RunManager" selected="Python.GUI_V05">
     <configuration name="GUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="android_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -309,6 +341,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main_word/GUI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GUI_V05" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="android_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main_word" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main_word/GUI_V05.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -354,21 +408,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in source_switch.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="android_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/case/source_switch.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests in test_case.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="android_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -385,19 +424,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests in source_switch.py" />
       <item itemvalue="Python tests.Unittests in test_case.py" />
       <item itemvalue="Python tests.Unittests for test_case.CaseTest.test_case_1" />
       <item itemvalue="Python.Runmain" />
       <item itemvalue="Python.GUI" />
+      <item itemvalue="Python.GUI_V05" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.GUI_V05" />
         <item itemvalue="Python.Runmain" />
         <item itemvalue="Python.GUI" />
         <item itemvalue="Python tests.Unittests for test_case.CaseTest.test_case_1" />
         <item itemvalue="Python tests.Unittests in test_case.py" />
-        <item itemvalue="Python tests.Unittests in source_switch.py" />
       </list>
     </recent_temporary>
   </component>
@@ -464,14 +503,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="36" width="1599" height="909" extended-state="0" />
+    <frame x="159" y="52" width="1599" height="909" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13329121" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13840155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.63237137" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.21419355" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993644" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -590,13 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/desired_setting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/page/source_switch_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -670,17 +702,28 @@
     <entry file="file://$PROJECT_DIR$/src/main_word/drow_ROI.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main_word/GUI.py">
+    <entry file="file://$PROJECT_DIR$/src/main_word/GUI.py" />
+    <entry file="file://$PROJECT_DIR$/src/main_word/Runmain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        <state relative-caret-position="189">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main_word/Runmain.py">
+    <entry file="file://$PROJECT_DIR$/src/main_word/GUI_V05.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="540">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#74#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/desired_setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
         </state>
       </provider>
     </entry>

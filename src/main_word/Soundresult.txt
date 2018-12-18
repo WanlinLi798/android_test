@@ -1,0 +1,72 @@
+sound OK
+has1times false 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+has97times false 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+has6times false 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+has3times false 
+has12times false 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+has2times false 
+sound OK 
+sound OK 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

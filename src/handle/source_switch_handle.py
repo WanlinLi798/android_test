@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 '''
-Created on 2018年10月22日
+Update on 2020年2月19日
 
-@author: uidq1501
+@author: uidp4235
 '''
 from page.source_switch_page import Source_Page
 
 class SourceHandle:
-    def __init__(self,i):
+    def __init__(self, i):
             self.page = Source_Page(i)
         
     def menu(self):
@@ -71,10 +71,13 @@ class SourceHandle:
 
     def quit(self):
         self.page.quit()
-
-if __name__ == '__main__' :
-    SourceHandle(0).menu()
-
         
-    
-    
+    def enter_pw(self, pw):
+        self.page.get_enter_PW().send_keys(pw)
+        
+    def pw_confirm(self):
+        self.page.get_pw_confirm().click()
+
+
+if __name__ == '__main__':
+    SourceHandle(0).menu()

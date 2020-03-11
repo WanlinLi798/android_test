@@ -3,20 +3,15 @@
 @author: uidq1501
 '''
 from business.source_switch_business import SourceBusiness
-from page.source_switch_page import Source_Page
 import time
 import os
 import serial
-from util.create_log_folder import Create_folder
-from PIL import Image
-from util.server import Server
-import math  #对比图片使用
-import operator
+from common.create_log_folder import Create_folder
+from driver.server import Server
 import subprocess
 import cv2
 import numpy as np
 from skimage.measure import compare_ssim
-
 
 class Factory_reset():
     def __init__(self,n):
@@ -30,7 +25,7 @@ class Factory_reset():
         n=0
         while (n<1000):
             n+=1
-            print '第'+str(n)+'次测试'
+            print('第'+str(n)+'次测试')
             appium_init()
             SourceBusiness(0).factory_reset()
             appium_stop()
@@ -41,8 +36,8 @@ class Factory_reset():
                 self.ser.write('adbdctl start\r\n')
                 time.sleep(1)
                 result = os.popen('adb devices').readlines()
-                print result
-                print '2'
+                print(result)
+                print('2')
                 end_time = time.time()
                 total_time = int(end_time) - int(start_time)
                 if '00001234\tdevice\n' in result :
@@ -53,21 +48,13 @@ class Factory_reset():
                     self.ser.write('setprop persist.sys.sv.debug_service 1\r\n')
 #                     time.sleep(1)
 #                     self.ser.close()
-                    print '重启appium'
+                    print('重启appium')
                     appium_init()
                     subprocess.call('adb kill-server') 
                     time.sleep(5)       
                     subprocess.call('adb start-server')            
                     time.sleep(200)
-#                     subprocess.call('adb shell /system/bin/screencap -p /storage/usb1/screenshot.png')
-#                     time.sleep(1)
-#                     cmd1 = "cd D:/BT_auto_test/report/G5_android/match"
-#                     cmd2 = "adb pull /storage/usb1/screenshot.png"
-#                     cmd = cmd1 + " && " + cmd2
-#                     subprocess.call(cmd,shell=True)
-#                     time.sleep(3)
-#                     subprocess.call("adb shell rm /storage/usb1/screenshot.png")  
-                    print '开始拍照截图'
+                    print('开始拍照截图')
                     canara_picture()                 
                     time.sleep(2)
                     self.match_PIC = cv2.imread(os.getcwd()+"/match.png")
@@ -77,7 +64,7 @@ class Factory_reset():
                     hash1 = pHash(self.PIC)
                     hash2 = pHash(self.match_PIC)
                     m= cmpHash(hash1, hash2)
-                    print m
+                    print(m)
                     if m >30:
 #                         appium_stop()
                         exit()
@@ -86,7 +73,7 @@ class Factory_reset():
                         os.system("cd D:/BT_auto_test/report/G5_android/match && del screenshot.png")
                         break
                 elif total_time > 180:
-                    print '死机'
+                    print('死机')
 #                     appium_stop()
                     exit()
 
@@ -175,12 +162,12 @@ def canara_picture():
     time.sleep(2)
     cap = cv2.VideoCapture(1)  
     while(1):#连续捕捉
-        ret,frame = cap.read()#cap.read()会返回一个结果
+        ret, frame = cap.read()#cap.read()会返回一个结果
         if not ret: 
             continue#解决官方程序报错的关键，因为很多摄像头返回的第一帧都无效
 
         time.sleep(1)
-        cv2.imwrite(os.getcwd()+"/match.png",frame)
+        cv2.imwrite(os.getcwd()+"/match.png", frame)
         a = os.path.getsize(os.getcwd()+"/match.png")
         b = 200000
         if int(a) < b:
@@ -200,14 +187,13 @@ def compare_image(imageA, imageB):
     (score, diff) = compare_ssim(grayA, grayB, full=True)
     print("SSIM: {}".format(score))
     return score
-    
 
 
 if __name__ == '__main__' :
 #     appium_init()
 #     Factory_reset(0).test_case()
 #     canara_picture()
-    print (os.getcwd()+"\test3.png")
+    print(os.getcwd()+"\test3.png")
     img1 = cv2.imread(r"../main_word/test2.png")
     img2 = cv2.imread("test3.png")
     compare_image(img1,img2)

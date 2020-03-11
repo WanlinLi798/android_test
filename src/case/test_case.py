@@ -4,11 +4,10 @@
 '''
 
 import unittest
-import HTMLTestRunner
 import time
 import multiprocessing
-from util.server import Server
-from util.write_user_command import WriteUserCommand
+from driver.server import Server
+from common.write_user_command import WriteUserCommand
 from business.source_switch_business import SourceBusiness
 
 class parameTestcase(unittest.TestCase):
@@ -20,14 +19,14 @@ class parameTestcase(unittest.TestCase):
 class CaseTest(parameTestcase):
     @classmethod
     def setUpClass(cls):
-        print 'this is setUpClass---->',parames
+        print('this is setUpClass---->',parames)
         cls.SourceBusiness = SourceBusiness(parames)
 
     def setUp(self):
-        print 'this is setup\n'
+        print('this is setup\n')
 
     def test_case_1(self):
-        print 'test case1'
+        print('test case1')
        # flag = True
        # self.assertEquals("1","1",'数据错误')
        # self.assertTrue(flag)
@@ -47,19 +46,19 @@ class CaseTest(parameTestcase):
 
     def tearDown(self):
         time.sleep(1)
-        print 'this is teardown\n'
+        print('this is teardown\n')
 
     @classmethod
     def tearDownClass(cls):
         time.sleep(1)
-        print 'this is class teardown\n'
+        print('this is class teardown\n')
 
 
 def get_suite(i):
-    print 'get_suite里面的',i
+    print('get_suite里面的', i)
     suite = unittest.TestSuite()
-    suite.addTest(CaseTest("test_case_1",parame=i))
-    suite.addTest(CaseTest("test_case_2",parame=i))
+    suite.addTest(CaseTest("test_case_1", parame=i))
+    suite.addTest(CaseTest("test_case_2", parame=i))
     unittest.TextTestRunner().run(suite)
 #     html_file = r"D:\Users\uidq1501\eclipse-workspace\android_test\src\report\report"+str(i)+".html"
 #     fp = file(html_file,'wb')
@@ -78,7 +77,7 @@ if __name__ == '__main__':
     appium_init()
     threads = []
     for i in range(2):
-        print i
+        print(i)
         t = multiprocessing.Process(target=get_suite,args=(i,))
         threads.append(t)
     for j in threads:

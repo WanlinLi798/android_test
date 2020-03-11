@@ -1,20 +1,19 @@
 # -*- coding: utf-8 -*-
 '''
-Created on 2018年10月22日
+Updated on 2020年2月18日
 
-@author: uidq1501
+@author: uidp4235
 '''
 import os
 import time
 from handle.source_switch_handle import SourceHandle
-from util.write_user_command import WriteUserCommand
+from common.write_user_command import WriteUserCommand
 
 class SourceBusiness:
-    def __init__(self,i):
+    def __init__(self, i):
         self.handle = SourceHandle(i)
         self.WF = WriteUserCommand()
-        self.udid = self.WF.get_value('user_info_'+str(i),'deviceName')
-
+        self.udid = self.WF.get_value('user_info_'+str(i), 'deviceName')
         
     def BT_switch(self):
         try:
@@ -23,7 +22,7 @@ class SourceBusiness:
 #             udid = self.WF.get_value('user_info_'+str(i),'deviceName')
             os.system('adb -s '+self.udid+' shell input tap 404 648')
 #             os.system('adb -s 00001234 shell input tap 404 648')
-            print 11111
+            print(11111)
             self.handle.music_hall()
             self.handle.BT()
             time.sleep(5)
@@ -58,14 +57,22 @@ class SourceBusiness:
         time.sleep(5)
 #         udid = self.WF.get_value('user_info_'+str(0),'deviceName')
         os.system('adb -s '+self.udid+' shell input tap 640 563')
-        print '进入设置界面'
+        print('进入设置界面')
         time.sleep(1)
         self.handle.setting()
-        print '恢复出厂设置'
+        print('恢复出厂设置')
         self.handle.system()
         self.handle.factory_reset()
         self.handle.confirm()
         time.sleep(30)
+        
+    def sendPW(self):
+        
+        self.handle.enter_pw('12345678')
+        self.handle.pw_confirm()
+        
+    def backhome(self):
+        self.handle.home()   
 
 
 if __name__ == '__main__' :

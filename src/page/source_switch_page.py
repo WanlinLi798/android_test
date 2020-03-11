@@ -4,8 +4,8 @@ Created on 2018年10月22日
 
 @author: uidq1501
 '''
-from util.use_driver import GetByLocal
-from util.desired_setting import BaseDriver
+from driver.use_driver import GetByLocal
+from driver.desired_setting import BaseDriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
@@ -15,16 +15,15 @@ from selenium.webdriver.common.by import By
 # import os
 # import time
 
-
 class Source_Page:
     # 获取登录页面所有的页面元素信息
-    def __init__(self,i):
+    def __init__(self, i):
         base_driver = BaseDriver()
         self.driver = base_driver.desired_setting(i)
         self.WebDriverWait = WebDriverWait
         self.EC = EC
         self.By = By
-        self.get_by_local = GetByLocal(self.driver,self.WebDriverWait,self.EC,self.By)
+        self.get_by_local = GetByLocal(self.driver, self.WebDriverWait, self.EC, self.By)
 
     def get_BT_element(self):
         '''
@@ -34,7 +33,8 @@ class Source_Page:
             return self.get_by_local.get_element('BT')
         except Exception:
             self.get_by_local.PIC('BT')
-            print '没有找到该元素或该元素不可点击'
+            print('没有找到该元素或该元素不可点击')
+
     def get_menu_element(self):
         '''
         获取menu元素信息
@@ -53,7 +53,7 @@ class Source_Page:
             return self.get_by_local.get_element('player')
         except Exception:
             self.get_by_local.PIC('player')
-            print '没有找到该元素或该元素不可点击'
+            print('没有找到该元素或该元素不可点击')
     
     def get_music_hall_element(self):
         '''
@@ -63,7 +63,7 @@ class Source_Page:
             return self.get_by_local.get_element('music_hall')
         except Exception:
             self.get_by_local.PIC('music_hall')
-            print '没有找到该元素或该元素不可点击'
+            print('没有找到该元素或该元素不可点击')
     
     def get_USB_audio_element(self):
         '''
@@ -73,7 +73,7 @@ class Source_Page:
             return self.get_by_local.get_element('USB_audio')
         except Exception:
             self.get_by_local.PIC('USB_audio')
-            print '没有找到该元素或该元素不可点击'
+            print('没有找到该元素或该元素不可点击')
     
     def home(self):
         self.driver.keyevent(3)
@@ -83,56 +83,70 @@ class Source_Page:
            return self.get_by_local.get_element('local_music')
         except Exception:
             self.get_by_local.PIC('local_music')
-            print '没有找到该元素或该元素不可点击'
+            print('没有找到该元素或该元素不可点击')
 
     def get_my_icon(self):
         try:
            return self.get_by_local.get_element('my_icon')
         except Exception:
             self.get_by_local.PIC('my_icon')
-            print '没有找到该元素或该元素不可点击'
+            print('没有找到该元素或该元素不可点击')
 
     def get_back(self):
         try:
            return self.get_by_local.get_element('back')
         except Exception:
             self.get_by_local.PIC('back')
-            print '没有找到该元素或该元素不可点击'
+            print('没有找到该元素或该元素不可点击')
 
     def get_find(self):
         try:
            return self.get_by_local.get_element('find')
         except Exception:
             self.get_by_local.PIC('find')
-            print '没有找到该元素或该元素不可点击'
+            print('没有找到该元素或该元素不可点击')
 
     def get_setting(self):
         try:
            return self.get_by_local.get_element('setting')
         except Exception:
             self.get_by_local.PIC('setting')
-            print '没有找到该元素或该元素不可点击'
+            print('没有找到该元素或该元素不可点击')
 
     def get_system(self):
         try:
            return self.get_by_local.get_element('system')
         except Exception:
             self.get_by_local.PIC('system')
-            print '没有找到该元素或该元素不可点击'
+            print('没有找到该元素或该元素不可点击')
 
     def get_factory_reset(self):
         try:
            return self.get_by_local.get_element('factory_reset')
         except Exception:
             self.get_by_local.PIC('factory_reset')
-            print '没有找到该元素或该元素不可点击'
+            print('没有找到该元素或该元素不可点击')
 
     def get_confirm(self):
         try:
             return self.get_by_local.get_element('confirm')
         except Exception:
             self.get_by_local.PIC('confirm')
-            print '没有找到该元素或该元素不可点击'
+            print('没有找到该元素或该元素不可点击')
+            
+    def get_enter_PW(self):
+        try:
+            return self.get_by_local.get_element('enter_pw')
+        except Exception:
+            self.get_by_local.PIC('enter')
+            print('没有找到该元素或该元素不可点击')
+            
+    def get_pw_confirm(self):
+        try:
+            return self.get_by_local.get_element('pw_confirm')
+        except Exception:
+            self.get_by_local.PIC('pw_confirm')
+            print('没有找到该元素或该元素不可点击')
 
 #     def get_screenshot(self,path):
 #         self.driver.get_screenshot_as_file(path)
@@ -153,4 +167,4 @@ class Source_Page:
 
 if __name__ == '__main__' :
     page = Source_Page(0)
-    print page.get_menu_element()
+    print(page.get_menu_element())

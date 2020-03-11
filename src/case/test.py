@@ -6,7 +6,7 @@ Created on 2018年10月31日
 '''
 import os
 import time
-from util.create_log_folder import Create_folder
+from common.create_log_folder import Create_folder
 import math  #对比图片使用
 import operator
 from PIL import Image
@@ -27,7 +27,7 @@ import serial
 import threading
 import time
 
-ser = serial.Serial("COM4",115200,bytesize=8)
+ser = serial.Serial("COM4", 115200, bytesize=8)
 ser.write("setprop persist.sv.debug.adb_enable 1\r\n")
 print(ser.readline())
 ser.close()

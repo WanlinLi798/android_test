@@ -36,6 +36,106 @@ sound OK
 has2times false 
 sound OK 
 sound OK 
+has3times false 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+has2times false 
+has3times false 
+has45times false 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+sound OK 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

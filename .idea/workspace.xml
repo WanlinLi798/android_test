@@ -2,93 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44e6e21a-dda8-411e-83ce-0658db515845" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/src.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/drow_ROI.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main_word/GUI_Main_V01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/report/result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/android_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/android_test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/source_switch_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/source_switch_business.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case/factory_reset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/case/factory_reset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case/match.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/case/match.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case/source_switch.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/case/source_switch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/case/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case/test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/case/test_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case/test_threading.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/case/test_threading.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/case.xls" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/case.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/userconfig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/userconfig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/error_screenshot/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handle/source_switch_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handle/source_switch_handle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/BT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/GUI_V01.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/GUI_V02.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/GUI_V03.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/GUI_V04.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/GUI_V05.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/GUI_V05.spec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/ROI.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/Runmain.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/Runmain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/Soundresult.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/Soundresult.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/USB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/Ui_9.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/action_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/action_method.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/build/GUI_V05/Analysis-00.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/build/GUI_V05/EXE-00.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/build/GUI_V05/GUI_V05.exe.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/build/GUI_V05/PKG-00.pkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/build/GUI_V05/PKG-00.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/build/GUI_V05/PYZ-00.pyz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/build/GUI_V05/PYZ-00.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/build/GUI_V05/Tree-00.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/build/GUI_V05/Tree-01.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/build/GUI_V05/warn-GUI_V05.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/build/GUI_V05/xref-GUI_V05.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/data/lvanlys.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/data/lvsound2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/dist/GUI_V05.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/drow_ROI.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/except.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/except1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/from_python.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/get_excel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/img_roi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/match_roi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/pyserialde.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/pyserialde.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/result.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/sound_check.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/sound_check.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/sound_check.tlb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_word/sound_check.tlb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/test1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/test1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/test2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/test2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/test3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/test4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/test5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_word/use_camara.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/use_camara.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/source_switch_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/source_switch_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/report/report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/report/report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/create_log_folder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/desired_setting.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/dos_cmd.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/log_save.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/opera_excel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/port.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/read_config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/server.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/use_driver.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/write_user_command.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -302,12 +216,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="py" value="6" />
+          <entry key="txt" value="3" />
           <entry key="vmoptions" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="PLAIN_TEXT" value="7" />
           <entry key="Python" value="6" />
         </counts>
       </usages-collector>
@@ -458,6 +373,11 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="LWL" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -822,7 +742,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540779497138</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="使用PO模型优化代码">
+      <created>1583939861245</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583939861245</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -868,6 +795,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1845238" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/PycharmProjects/AppiumTestV01/.idea/AppiumTestV01.iml" filepath="$USER_HOME$/PycharmProjects/AppiumTestV01/.idea/AppiumTestV01.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/android_test.iml" filepath="$PROJECT_DIR$/.idea/android_test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../android_testV01/.idea/android_testV01.iml" filepath="$PROJECT_DIR$/../android_testV01/.idea/android_testV01.iml" />
     </modules>
   </component>
 </project>
